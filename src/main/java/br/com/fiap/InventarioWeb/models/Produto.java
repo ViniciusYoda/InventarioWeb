@@ -1,20 +1,14 @@
 package br.com.fiap.InventarioWeb.models;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.Builder;
+import lombok.*;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 
-import jakarta.persistence.Entity;
-import jakarta.persistenece.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
-import jakarta.validation.constrainst.Min;
-import jakarta.validation.constrainst.NotEmpty;
+import br.com.fiap.InventarioWeb.models.Fornecedor;
 
 @Entity
 @Data
-@NotArgsConstructor
+@NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class Produto {

@@ -1,17 +1,11 @@
 package br.com.fiap.InventarioWeb.models;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import jakarta.validation.constrainst.NotEmpty;
+import lombok.*;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 import java.util.List;
+
+import br.com.fiap.InventarioWeb.models.Produto;
 
 @Entity
 @Data
@@ -29,5 +23,5 @@ public class Fornecedor {
     private String endereco;
 
     @OneToMany(mappedBy = "fornecedor")
-    private List<Produto> produto
+    private List<Produto> produto;
 }
