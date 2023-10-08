@@ -8,6 +8,7 @@ import java.util.List;
 import br.com.fiap.InventarioWeb.models.Produto;
 
 @Entity
+@Table(name = "fornecedor_dimdim")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
