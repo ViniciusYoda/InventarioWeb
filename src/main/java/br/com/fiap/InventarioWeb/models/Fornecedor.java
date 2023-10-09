@@ -23,6 +23,8 @@ public class Fornecedor {
 
     private String endereco;
 
+    private int telefone
+
     @OneToMany(mappedBy = "fornecedor")
     private List<Produto> produto;
 }

@@ -21,6 +21,10 @@ public class SecurityConfig {
             .requestMatchers(HttpMethod.GET, "/api/produtos").permitAll()
             .requestMatchers(HttpMethod.PUT, "/api/produtos").permitAll()
             .requestMatchers(HttpMethod.DELETE, "/api/produtos").permitAll()
+            .requestMatchers(HttpMethod.POST, "/api/fornecedor").permitAll()
+            .requestMatchers(HttpMethod.GET, "/api/fornecedor").permitAll()
+            .requestMatchers(HttpMethod.PUT, "/api/fornecedor").permitAll()
+            .requestMatchers(HttpMethod.DELETE, "/api/fornecedor").permitAll()
             .and()
             .csrf()
             .disable();
