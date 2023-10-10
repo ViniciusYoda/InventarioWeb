@@ -1,11 +1,17 @@
 package br.com.fiap.InventarioWeb.models;
 
 import lombok.*;
-import jakarta.persistence.*;
-import jakarta.validation.constraints.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+//import jakarta.validation.constraints.*;
 import java.util.List;
 
-import br.com.fiap.InventarioWeb.models.Produto;
+//import org.hibernate.annotations.IdGeneratorType;
+
 
 @Entity
 @Table(name = "fornecedor_dimdim")
@@ -18,12 +24,11 @@ public class Fornecedor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotEmpty(message = "O nome do fornecedor é obrigatório.")
     private String nome;
 
     private String endereco;
 
-    private int telefone;
+    private String telefone;
 
     @OneToMany(mappedBy = "fornecedor")
     private List<Produto> produto;

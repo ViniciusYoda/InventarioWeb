@@ -4,7 +4,7 @@ import lombok.*;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 
-import br.com.fiap.InventarioWeb.models.Fornecedor;
+//import br.com.fiap.InventarioWeb.models.Fornecedor;
 
 @Entity
 @Table(name = "produto_dimdim")
